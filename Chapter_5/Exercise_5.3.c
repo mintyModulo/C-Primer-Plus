@@ -14,6 +14,17 @@ int main(void)
     printf("%s", "Enter in the number of days to convert (<= 0 to end): ");
     scanf("%u", &numberOfDays);
 
+    while(numberOfDays > 0)
+    {
+        unsigned totalWeeks = numberOfDays / daysInWeek;
+
+        printf("%u days are %u weeks, \n", numberOfDays, totalWeeks);
+
+        printf("%s", "Enter in the number of days to convert (<= 0 to end): ");
+        scanf("%u", &numberOfDays);
+    }
+    
+    printf("%s", "Exiting now.\n");
 
     return 0;
 }
