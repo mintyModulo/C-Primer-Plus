@@ -8,7 +8,11 @@
 
 int main(void)
 {
+    const unsigned int daysInWeek = 7;
+    unsigned int numberOfDays;
 
+    printf("%s", "Enter in the number of days to convert (<= 0 to end): ");
+    scanf("%u", &numberOfDays);
 
 
     return 0;
