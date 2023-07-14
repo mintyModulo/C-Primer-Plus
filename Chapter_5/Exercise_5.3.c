@@ -9,17 +9,17 @@
 int main(void)
 {
     const unsigned int daysInWeek = 7;
-    unsigned int numberOfDays;
+    int numberOfDays;
 
     printf("%s", "Enter in the number of days to convert (<= 0 to end): ");
-    scanf("%u", &numberOfDays);
+    scanf("%d", &numberOfDays);
 
     while(numberOfDays > 0)
     {
-        unsigned totalWeeks = numberOfDays / daysInWeek;
+        unsigned int totalWeeks = (unsigned int) numberOfDays / daysInWeek;
+        unsigned int daysRemainig = (unsigned int) numberOfDays % daysInWeek;
 
-        printf("%u days are %u weeks, \n", numberOfDays, totalWeeks);
-
+        printf("%u days are %u weeks, %u days\n", (unsigned int) numberOfDays, totalWeeks, daysRemainig);
         printf("%s", "Enter in the number of days to convert (<= 0 to end): ");
         scanf("%u", &numberOfDays);
     }
