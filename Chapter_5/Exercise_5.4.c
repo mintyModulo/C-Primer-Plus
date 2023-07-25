@@ -12,11 +12,23 @@
 
 int main(void)
 {
-    const float centimetersInInches = 2.54;
+    const float centimetersInInch = 2.54;
+    const float inchesInFoot = 12.0;
+
     float userCentimeters;
     
     printf("Enter your height in centimeters: ");
     scanf("%f", &userCentimeters);
+
+    while(userCentimeters > 0)
+    {
+        int userInFeet = ( userCentimeters / centimetersInInch) / 12;
+        
+        printf("%.1f cm = %.1d\n", userCentimeters, userInFeet);
+
+        printf("Enter your height in centimeters: ");
+        scanf("%f", &userCentimeters);
+    }
 
 
     return 0;
