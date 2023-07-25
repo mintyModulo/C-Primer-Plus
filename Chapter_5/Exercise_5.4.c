@@ -12,6 +12,11 @@
 
 int main(void)
 {
+    const float centimetersInInches = 2.54;
+    float userCentimeters;
+    
+    printf("Enter your height in centimeters: ");
+    scanf("%f", &userCentimeters);
 
 
     return 0;
