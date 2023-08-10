@@ -18,12 +18,19 @@ void Temperatures(double a);
 
 int main(void)
 {
+    int status;
     double userFahrenheit;
 
-    printf("Enter the temperature in fahrenheit: ");
-    scanf("%lf", &userFahrenheit);
+    printf("Enter the temperature in fahrenheit (q or other nonumeric value to quit): ");
+    status = scanf("%lf", &userFahrenheit);
 
+    while(status == 1)
+    {
     Temperatures(userFahrenheit);
+
+    printf("Enter the temperature in fahrenheit: ");
+    status = scanf("%lf", &userFahrenheit);
+    }
 
     return 0;
 }
